@@ -15,7 +15,7 @@ CSF111 - Introduction to Computer Programming
 ## Works
 
 <pre align="center">
-For Reference Only
+For Reference Only :
 </pre>
 
 <br>This is a repository to encapsulate everything covered in BITS Pilani's Intro to Computer Programming course. By the end of this semester, this repo will have been updated with notes from all lectures, as well as resources for lab work, practice assignments, and past papers.
