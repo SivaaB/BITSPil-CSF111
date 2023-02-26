@@ -2,22 +2,24 @@
 
 int main (void)
 { 
-    int m1, m2, m3, m4, m5;
+    float m1, m2, m3, m4, m5;
+    float total, average, percentage; 
 
     printf ("Student - 1, Marks: "); 
-    scanf ("%d", &m1); 
+    scanf ("%f", &m1); 
     printf ("Student - 2, Marks: "); 
-    scanf ("%d", &m2); 
+    scanf ("%f", &m2); 
     printf ("Student - 3, Marks: "); 
-    scanf ("%d", &m3); 
+    scanf ("%f", &m3); 
     printf ("Student - 4, Marks: "); 
-    scanf ("%d", &m4); 
+    scanf ("%f", &m4); 
     printf ("Student - 5, Marks: "); 
-    scanf ("%d", &m5); 
+    scanf ("%f", &m5); 
 
-    int average = m1 + m2 + m3 + m4 + m5 / 500; 
-    printf ("%d\n", average); 
+    total = m1 + m2 + m3 + m4 + m5; 
+    average = total/5;
+    printf ("%f\n", average); 
 
-    int percentage = (m1 + m2 + m3 + m4 + m5 / 500)*100; 
-    printf ("%d\n", percentage);
+    percentage = average; 
+    printf ("%f%%\n", percentage);
 }
