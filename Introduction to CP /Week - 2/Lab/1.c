@@ -2,12 +2,12 @@
 
 int main (void)
 { 
-    char character; 
+    int ascii_value; 
 
-    printf ("Character: "); 
-    scanf ("%c", &character); 
+    printf ("ASCII Value: "); 
+    scanf ("%d", &ascii_value); 
 
-    int character_ascii = character; 
+    char character = ascii_value; 
 
-    printf ("%d\n", character_ascii); 
+    printf ("%c\n", character); 
 }
