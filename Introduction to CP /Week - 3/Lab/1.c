@@ -1,68 +1,51 @@
 #include <stdio.h> 
-
-int main (void)
+int main()
 { 
-    char character; 
-    int c1; 
+    char input; 
+    printf ("Enter character: "); 
+    scanf ("%c", &input); 
 
-    printf ("Enter Character: "); 
-    scanf ("%c", &character); 
-
-    switch (character)
+    switch (input)
     { 
-        case 'a' :
-        { 
-            printf ("Vowel\n"); 
-            break;
-        }
-        case 'e' :
-        { 
-            printf ("Vowel\n"); 
-            break; 
-        }
+        case 'a': 
+        case 'e': 
         case 'i': 
-        { 
-            printf ("Vowel\n"); 
-            break; 
-        }
-        case 'o': 
-        { 
-            printf ("Vowel\n"); 
-            break; 
-        }
+        case 'o':
         case 'u': 
         { 
             printf ("Vowel\n"); 
             break; 
         }
-        case 'A': 
+
+        case 'b': 
+        case 'c':
+        case 'd': 
+        case 'f': 
+        case 'g': 
+        case 'h': 
+        case 'j': 
+        case 'k': 
+        case 'l': 
+        case 'm': 
+        case 'n': 
+        case 'p': 
+        case 'q': 
+        case 'r': 
+        case 's': 
+        case 't': 
+        case 'v': 
+        case 'w': 
+        case 'x': 
+        case 'y': 
+        case 'z':
         { 
-            printf ("Vowel\n"); 
+            printf ("Consonant\n"); 
             break; 
         }
-        case 'E': 
+
+        default: 
         { 
-            printf ("Vowel\n"); 
-            break; 
+            printf ("Invalid Character\n"); 
         }
-        case 'I': 
-        { 
-            printf ("Vowel\n"); 
-            break; 
-        }
-        case 'O': 
-        { 
-            printf ("Vowel\n"); 
-            break; 
-        }
-        case 'U': 
-        { 
-            printf ("Vowel\n"); 
-            break; 
-        }
-        default : 
-        { 
-            printf ("Invalid character."); 
-        }
-    }
+    } 
 }
