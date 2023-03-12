@@ -1,15 +1,13 @@
-#include <stdio.h>
-
-int main (void)
+#include <stdio.h> 
+int main ()
 { 
-    float Radius; 
-    float Pi = 3.14; 
+    float radius, perimeter, area; 
+    printf ("Enter Radius: "); 
+    scanf ("%f", &radius); 
 
-    printf ("Radius: "); 
-    scanf ("%f", &Radius); 
+    perimeter = 2 * 3.14 * radius; 
+    area = 3.14 * radius * radius; 
 
-    float perimeter = 2.0 * Pi * Radius; 
-    printf ("Perimeter %f\n", perimeter); 
-    float area = Pi * Radius * Radius; 
-    printf ("Area %f\n", area); 
+    printf ("%f\n", perimeter); 
+    printf ("%f\n", area); 
 }
