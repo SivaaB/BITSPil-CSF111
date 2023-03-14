@@ -2,28 +2,19 @@
 
 int main (void)
 { 
-    int mark_list1[5] = {22, 33, 44, 55, 66}; 
-    int mark_list2[5] = {22, 33, 44, 55, 66}; 
-    
-    int flag = 0; 
+    int i, n; 
+    int t1 = 0, t2 = 1; 
+    int nextTerm = t1 + t2; 
 
-    for (int i = 0; i < 5; i++)
+    printf ("Number of Terms: "); 
+    scanf ("%d", &n); 
+
+    printf("Fibonacci Series: %d %d ", t1, t2);
+    for (i = 3 ; i < n; i++)
     { 
-        for (int j = 0; j < 5; j++)
-        { 
-            if (mark_list1[i] == mark_list2[j])
-            { 
-                flag = 1; 
-                break; 
-            } 
-        }  
-    }
-    if (flag == 1)
-    { 
-        printf ("Identical\n"); 
-    }
-    else
-    { 
-        printf ("Non - Identical\n"); 
+        printf ("%d ", nextTerm); 
+        t1 = t2; 
+        t2 = nextTerm; 
+        nextTerm = t1 + t2; 
     }
 }

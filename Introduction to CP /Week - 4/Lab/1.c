@@ -1,41 +1,30 @@
-// Sub-Div (a)
-
 #include <stdio.h> 
-
-int main (void)
+int main ()
 { 
-    int height; 
+    int num, flag; 
+    printf ("Enter number: "); 
+    scanf ("%d", &num); 
 
-    printf ("Height: "); 
-    scanf ("%d", &height); 
-
-    for (int i = 1; i < height + 1; i++ )
+    for (int i = 2; i < num; i++) 
     { 
-        for (int j = 0; j < i ; j++)
+        if (num%i == 0)
         { 
-            printf("%d", i); 
+            flag = 0; 
         }
-        printf ("\n"); 
+
+        else
+        { 
+            flag = 1; 
+        }
     }
-}
 
-// Sub-Div (b)
-
-#include <stdio.h> 
-
-int main (void)
-{ 
-    int height; 
-
-    printf ("Height: "); 
-    scanf ("%d", &height); 
-
-    for (int i = 1; i < height + 1; i++)
+    if (flag == 0)
     { 
-        for (int j = i; j >= 1 ; j--) // j = 1, the last number in row must be greater than or equal to 1. 
-        { 
-            printf("%d", j); 
-        }
-        printf ("\n"); 
+        printf ("Not Prime"); 
     }
+    else if (flag == 1)
+    { 
+        printf ("Prime"); 
+    }
+    
 }

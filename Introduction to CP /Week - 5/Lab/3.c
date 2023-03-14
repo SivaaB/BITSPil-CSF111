@@ -2,46 +2,45 @@
 
 int main (void)
 { 
-    float salary; 
-    float HRA, Special_Allowance; 
-    float total_salary; 
 
-    int n; 
+    int marks[5];  
+    int sum = 0; 
+    float percentage; 
 
-    printf ("Number of Employees: "); 
-    scanf ("%d", &n); 
-
-    int arr[n]; 
-
-    for(int i = 0; i < n; i++)
+    printf ("Enter marks in 5 subjects: "); 
+    for (int i = 0; i < 5; i++)
     { 
-        printf ("Base Salary: "); 
-        scanf ("%f", &salary); 
+        scanf ("%d", &marks[i]); 
+        sum += marks [i]; 
+    } 
+    percentage = (sum/5); 
 
-        HRA = 0.4 * salary; 
-        Special_Allowance = 0.25 * salary; 
-        total_salary = salary + HRA + Special_Allowance; 
+    printf ("Total: %d\n", sum); 
+    printf ("Percent: %f\n", percentage); 
 
-        printf ("Total Salary: %f\n", total_salary); 
-        arr[i] = total_salary; 
-        printf ("-xxxxxxxxxxxxxxx-\n");
+    if (percentage >= 90)
+    { 
+        printf("Grade - A\n"); 
+    }
+    else if (percentage >= 80)
+    { 
+        printf("Grade - B\n"); 
+    }
+    else if (percentage >= 70)
+    { 
+        printf("Grade - C\n"); 
+    }
+    else if (percentage >= 60)
+    { 
+        printf("Grade - D\n"); 
+    }
+    else if (percentage >= 40)
+    { 
+        printf("Grade - E\n"); 
+    }
+    else if (percentage < 40)
+    { 
+        printf("Grade - F\n"); 
     }
 
-    for (int i = 0; i < n; i++)
-    { 
-        for (int j = i + 1; j < n; j++)
-        { 
-            if (arr [i] < arr[j])
-            { 
-                int temp = arr[i]; 
-                arr[i] = arr [j]; 
-                arr[j] = temp; 
-            }
-        } 
-    }
-
-    for (int i = 0; i < n; i++)
-    { 
-        printf ("%d\n", arr[i]); 
-    }
 }

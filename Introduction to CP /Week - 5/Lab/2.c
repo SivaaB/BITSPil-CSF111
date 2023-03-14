@@ -1,28 +1,31 @@
-#include <stdio.h>
+#include <stdio.h> 
 
-int main() 
-{
-    int rows, coef = 1, space, i, j;
+int main (void)
+{ 
+    int nos; 
+    int nosj;
+    float avg = 0.0; 
 
-    printf("Enter the number of rows: ");
-    scanf("%d", &rows);
+    printf ("Number of Students: "); 
+    scanf ("%d", &nos); 
+    printf ("Number of Subjects: "); 
+    scanf ("%d", &nosj); 
 
-    for (i = 0; i < rows; i++) 
+    float sum = 0.0; 
+    int a[nosj]; 
+
+    for (int i = 0; i < nos; i++)
     {
-        for (space = 1; space <= rows - i; space++)
-        {
-            printf("  ");
+        printf ("Student - %d\n", (i+1)); 
+        printf ("Enter marks in %d subjects: ", nosj); 
+        for (int j = 0; j < nosj; j++)
+        { 
+            scanf ("%d", &a[j]); 
+            sum = sum + a[j]; 
         }
-
-        for (j = 0; j <= i; j++) 
-        {
-            if (j == 0 || i == 0)
-                coef = 1;
-            else
-                coef = coef * (i - j + 1) / j;
-
-            printf("%4d", coef);
-        }
-        printf("\n");
+        avg = sum/nosj; 
+        printf ("Average : %f\n", avg); 
+        float avg = 0.0; 
+        sum = 0; 
     }
 }

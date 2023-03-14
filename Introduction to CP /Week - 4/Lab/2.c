@@ -1,31 +1,37 @@
 #include <stdio.h> 
-
-int main (void)
+int main()
 { 
-    int nos; 
-    int nosj;
-    float avg = 0.0; 
+    int n1, digit, unit_digit, nod; 
+    int sum1, remainder, rev_of_sum = 0; 
+    printf ("Enter number: "); 
+    scanf ("%d", &n1); 
+    printf ("Enter number of digits: "); 
+    scanf ("%d", &nod); 
 
-    printf ("Number of Students: "); 
-    scanf ("%d", &nos); 
-    printf ("Number of Subjects: "); 
-    scanf ("%d", &nosj); 
+    do
+    { 
+        digit = n1 % 10; 
+        sum1 += digit; 
+        n1 /= 10; 
+    }
+    while (n1 > 0); 
+    printf ("Sum of digits in number: %d\n", sum1); 
 
-    float sum = 0.0; 
-    int a[nosj]; 
+    do
+    { 
+        remainder = sum1 % 10; 
+        rev_of_sum = (rev_of_sum*10) + remainder; 
+        sum1 /= 10; 
+    }
+    while (sum1 > 0); 
+    printf ("Reverse of sum of digits of first number: %d\n", rev_of_sum); 
 
-    for (int i = 0; i < nos; i++)
-    {
-        printf ("Student - %d\n", (i+1)); 
-        printf ("Enter marks in %d subjects: ", nosj); 
-        for (int j = 0; j < nosj; j++)
-        { 
-            scanf ("%d", &a[j]); 
-            sum = sum + a[j]; 
-        }
-        avg = sum/nosj; 
-        printf ("Average : %f\n", avg); 
-        float avg = 0.0; 
-        sum = 0; 
+    if (rev_of_sum * sum1 == n1)
+    { 
+        printf ("Magic Number!\n"); 
+    }
+    else 
+    { 
+        printf ("Not a Magic Number!\n"); 
     }
 }
