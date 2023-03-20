@@ -30,7 +30,7 @@ int main()
     while (sum1 > 0); 
     printf ("Reverse of sum of digits of first number: %d\n", rev_of_sum); 
 
-    if (rev_of_sum * og_sum == n1)
+    if (rev_of_sum * og_sum == og_num)
     { 
         printf ("Magic Number!\n"); 
     }
