@@ -10,6 +10,7 @@ int main ()
         if (num%i == 0)
         { 
             flag = 0; 
+            break; 
         }
 
         else
