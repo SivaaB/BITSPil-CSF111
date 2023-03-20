@@ -3,10 +3,12 @@ int main()
 { 
     int n1, digit, unit_digit, nod; 
     int sum1, remainder, rev_of_sum = 0; 
+    int og_sum, og_num; 
     printf ("Enter number: "); 
     scanf ("%d", &n1); 
     printf ("Enter number of digits: "); 
     scanf ("%d", &nod); 
+    og_num = n1; 
 
     do
     { 
@@ -16,7 +18,9 @@ int main()
     }
     while (n1 > 0); 
     printf ("Sum of digits in number: %d\n", sum1); 
-
+    
+    og_sum = sum1; 
+    
     do
     { 
         remainder = sum1 % 10; 
@@ -26,7 +30,7 @@ int main()
     while (sum1 > 0); 
     printf ("Reverse of sum of digits of first number: %d\n", rev_of_sum); 
 
-    if (rev_of_sum * sum1 == n1)
+    if (rev_of_sum * og_sum == n1)
     { 
         printf ("Magic Number!\n"); 
     }
