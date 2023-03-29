@@ -50,6 +50,7 @@ int main (void)
             { 
                 printf ("%d  ", sum[i][j]); 
             }
+            printf ("\n"); 
         }
     } 
     else if (choice == 2)
@@ -60,6 +61,7 @@ int main (void)
             { 
                 subtraction[i][j] = array_A[i][j] - array_B[i][j]; 
             }
+            printf ("\n"); 
         }
 
         printf ("Subtraction: \n"); 
