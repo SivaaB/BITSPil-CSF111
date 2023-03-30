@@ -25,3 +25,8 @@ For Reference Only
 <br>Kindly keep in mind about the academic honesty and plagarism as per course policy. 
 
 </p>
+
+## Authors: 
+
+<p> --> <a href = "https://github.com/SivaaB">Sivaa B</p> 
+<p> --> <a href = "https://github.com/vennby"> Vennela </p>
