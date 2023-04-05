@@ -4,6 +4,7 @@ int main()
     int rows, columns, i, j;
     printf("Enter the number of rows and columns of the matrix: ");
     scanf("%d %d", &rows, &columns);
+    
     int matrix[rows][columns]; 
 
     if (rows != columns) 
