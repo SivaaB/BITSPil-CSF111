@@ -10,6 +10,10 @@ int lcm(int n1,int n2)
     {
         return multiple;
     }
+    else 
+    { 
+        lcm (n1,n2); 
+    }
 }
 
 int main()
