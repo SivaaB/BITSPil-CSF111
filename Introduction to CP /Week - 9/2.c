@@ -1,23 +1,23 @@
 #include <stdio.h> 
 
-int sum, digit; 
+int sum, digit, n; 
 
-int sod(number)
+int sod(int n)
 { 
-    while (number > 0)
+    if (n <= 0)
     { 
-        digit = number % 10; 
-        sum = sum + digit; 
-        number = number / 10; 
+        return 0; 
     }
-    return sum; 
+    else 
+    { 
+        return((n % 10) + sod(n/10)); 
+    }
 }
 
 int main()
 { 
-    int number;  
     printf ("Enter number: "); 
-    scanf ("%d", &number); 
-    sum = sod(number); 
-    printf ("Sum of Digits in %d : %d\n", number, sum); 
+    scanf ("%d", &n); 
+    sum = sod(n); 
+    printf ("Sum of Digits in %d : %d\n", n, sum); 
 }
