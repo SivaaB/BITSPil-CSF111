@@ -13,7 +13,6 @@ int main() {
     printf("Enter your last name: ");
     scanf("%s", last_name);
 
-    // Concatenate the three strings into one
     for (i = 0; first_name[i] != '\0'; i++) 
     {
         full_name[i] = first_name[i];
