@@ -16,9 +16,12 @@ int main ()
         scanf("%d", &Arr[i]); 
     }
 
-    for (int i = n - 1, j = 0; i >= 0 , j <= n-1; i-- ,j++)
+    for (int i = n - 1; i >= 0; i--)
     { 
-        sum = sum + (Arr[i] * pow (2, j)); 
+        for ( int j = 0; j <= n - 1; j++)
+        {
+            sum = sum + (Arr[i] * pow (2, j)); 
+        }
     }
     printf ("Decimal Equivalent = %d\n", sum); 
 } 
