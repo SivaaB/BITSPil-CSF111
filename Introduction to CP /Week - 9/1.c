@@ -1,21 +1,25 @@
 #include <stdio.h> 
 
-int nod(number)
+int number, digit; 
+
+int nod(int number)
 { 
-    int count = 0; 
-    while (number > 0)
-    { 
-        number = number / 10; 
-        count++; 
+    if (number <= 0)
+    {
+        return 0; 
     }
-    return count; 
+    else 
+    { 
+        digit++; 
+        return nod(number/10); 
+    }
 }
 
 int main()
 { 
-    int number, digit; 
     printf ("Enter number: "); 
     scanf ("%d", &number); 
-    digit = nod(number); 
+    digit = 0; 
+    nod(number); 
     printf ("Number of Digits in %d : %d\n", number, digit); 
 }
