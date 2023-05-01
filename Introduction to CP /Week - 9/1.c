@@ -1,5 +1,6 @@
 #include <stdio.h> 
 
+
 int number, digit; 
 
 int nod(int number)
