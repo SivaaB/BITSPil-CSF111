@@ -12,7 +12,7 @@ int lcm(int n1,int n2)
     }
     else 
     { 
-        lcm (n1,n2); 
+        return lcm (n1,n2); 
     }
 }
 
