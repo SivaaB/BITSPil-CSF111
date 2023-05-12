@@ -4,14 +4,14 @@ int sum, digit;
 
 int lcm(int n1,int n2)
 { 
-    static int multiple = 0;
-    multiple += n2;
+    static int multiple = 2;
     if ((multiple % n1 == 0) && (multiple % n2 == 0)) 
     {
         return multiple;
     }
     else 
     { 
+        multiple++; 
         return lcm (n1,n2); 
     }
 }
