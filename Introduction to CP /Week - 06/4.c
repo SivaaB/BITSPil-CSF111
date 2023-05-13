@@ -36,7 +36,7 @@ int main()
         {
         if(key==A[i][j]) 
             {
-                printf("\n It is in row %d, column %d.", i+1,j+1); 
+                printf("\n It is in row %d, column %d.", i+1,j+1); //technically it's fine to leave this at i, j. but in this case to make the index more user friendly we add 1. 
             }
         }
     }
