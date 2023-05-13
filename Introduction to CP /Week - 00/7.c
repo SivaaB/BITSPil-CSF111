@@ -15,7 +15,7 @@ int main()
 
     for(int i = 0; i < n; i++)
     {
-        min=i;
+        min= A[0];
         for(int j = i + 1; j < n; j++)
         {
             if(A[min]>A[j]) 
