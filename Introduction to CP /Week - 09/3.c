@@ -4,7 +4,7 @@ int sum, digit;
 
 int lcm(int n1,int n2)
 { 
-    static int multiple = 2;
+    static int multiple = 2; // using static here so after each recursion instance we have an updated value of 2, and not just 2 each time. 
     if ((multiple % n1 == 0) && (multiple % n2 == 0)) 
     {
         return multiple;
